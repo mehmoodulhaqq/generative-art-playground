@@ -1,0 +1,242 @@
+
+/* ========================================
+   1. GOOGLE FONT
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+
+/* ========================================
+   2. CSS VARIABLES
+======================================== */
+
+:root {
+
+    /* Colors */
+    --color-background: #F9F8FC;
+    --color-white: #FFFFFF;
+
+    --color-primary: #A78BFA;
+    --color-primary-dark: #7655C8;
+
+    --color-blush: #F2B8D0;
+
+    --color-text: #272333;
+    --color-text-light: #777386;
+
+    --color-border: #EAE7F1;
+
+    /* Typography */
+    --font-primary: 'DM Sans', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+
+    /* Font Sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    --text-4xl: 2.75rem;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 999px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 10px rgba(40, 30, 70, 0.04);
+
+    --shadow-md: 0 8px 24px rgba(40, 30, 70, 0.07);
+
+    --shadow-lg: 0 16px 40px rgba(40, 30, 70, 0.10);
+
+    /* Layout */
+    --container-width: 1200px;
+
+    /* Transitions */
+    --transition: 0.3s ease;
+
+}
+
+
+/* ========================================
+   3. CSS RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   4. GLOBAL ELEMENTS
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+p {
+    color: var(--color-text-light);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ========================================
+   5. REUSABLE CONTAINERS
+======================================== */
+
+.container {
+    width: min(90%, var(--container-width));
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: var(--space-2xl);
+}
+
+
+/* ========================================
+   6. BUTTONS
+======================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-xs);
+
+    padding: 12px 24px;
+
+    border-radius: var(--radius-full);
+
+    font-size: var(--text-sm);
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: #6542B5;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
+
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-primary);
+    background-color: #F5F0FF;
+}
+
+
+/* ========================================
+   7. SECTION HEADINGS
+======================================== */
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: 600;
+
+    margin-bottom: var(--space-sm);
+}
+
+.section-description {
+    font-size: var(--text-base);
+    max-width: 600px;
+}
+
+
+/* ========================================
+   8. CARDS
+======================================== */
+
+.card {
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   9. SELECTION
+======================================== */
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
